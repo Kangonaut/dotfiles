@@ -8,4 +8,4 @@ This is just a repo to manage all my dotfiles. I use the [chezmoi](https://www.c
 - [kitty](/private_dot_config/kitty)
 - [tmux](dot_tmux.conf)
 - [streamlit](/dot_streamlit/)
-
+- [taskwarrior](/dot_taskrc)
