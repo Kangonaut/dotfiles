@@ -33,11 +33,11 @@ return {
     -- add categories to which-key
     require("which-key").add({
       -- run
-      { "<leader>r", group = "[r]un" },
+      { "<leader>r",  group = "[r]un" },
       { "<leader>r_", hidden = true },
 
       -- insert
-      { "<leader>i", group = "[i]nsert" },
+      { "<leader>i",  group = "[i]nsert" },
       { "<leader>i_", hidden = true },
     })
 
@@ -53,6 +53,6 @@ return {
     end, { desc = "[r]un [e]verything (all languages)", silent = true })
 
     -- insert keymaps
-    vim.keymap.set("n", "<leader>ip", "i```python<CR><CR>```<ESC>k0", { desc = "[i]nsert [p]ython block" })
+    vim.keymap.set("n", "<leader>ip", "i```{python}<CR><CR>```<ESC>k0", { desc = "[i]nsert [p]ython block" })
   end,
 }
