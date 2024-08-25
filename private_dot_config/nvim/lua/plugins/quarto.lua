@@ -33,11 +33,11 @@ return {
     -- add categories to which-key
     require("which-key").add({
       -- run
-      { "<leader>r",  group = "[r]un" },
+      { "<leader>r", group = "[r]un" },
       { "<leader>r_", hidden = true },
 
       -- insert
-      { "<leader>i",  group = "[i]nsert" },
+      { "<leader>i", group = "[i]nsert" },
       { "<leader>i_", hidden = true },
     })
 
