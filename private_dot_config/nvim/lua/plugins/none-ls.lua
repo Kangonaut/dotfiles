@@ -17,6 +17,7 @@ return {
 
         -- Python
         null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort,
 
         -- Spelling
         null_ls.builtins.diagnostics.codespell, -- fix common spelling mistakes
