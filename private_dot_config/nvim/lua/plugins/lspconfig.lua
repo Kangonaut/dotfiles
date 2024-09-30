@@ -11,7 +11,17 @@ local servers = {
   },
 
   -- Python
-  pyright = {},
+  pyright = {
+    settings = {
+      python = {
+        analysis = {
+          diagnosticSeverityOverrides = {
+            reportUnusedExpression = "none", -- this removes a really annoying warning in notebook type files
+          },
+        },
+      },
+    },
+  },
 }
 
 local tools = {
