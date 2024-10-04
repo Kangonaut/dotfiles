@@ -4,7 +4,9 @@
 
 return {
   "benlubas/molten-nvim",
-  version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+  -- version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+  -- NOTE: using main branch instead of latest release, to get fix for :MoltenSave command
+  branch = "main",
   dependencies = { "3rd/image.nvim" },
   build = ":UpdateRemotePlugins",
   ft = { "quarto", "markdown" },
@@ -21,19 +23,22 @@ return {
   end,
   config = function()
     require("which-key").add({
-      { "<leader>m", group = "[m]olten" },
+      { "<leader>m",  group = "[m]olten" },
       { "<leader>m_", hidden = true },
     })
     require("which-key").add({
-      { "<leader>o", group = "[o]utput" },
+      { "<leader>o",  group = "[o]utput" },
       { "<leader>o_", hidden = true },
     })
 
     vim.keymap.set("n", "<leader>mi", ":MoltenInit<CR>", { desc = "[m]olten [i]nit", silent = true })
-    vim.keymap.set("n", "<leader>me", ":MoltenEvaluateOperator<CR>", { desc = "[m]olten [e]valuate operator", silent = true })
+    vim.keymap.set("n", "<leader>me", ":MoltenEvaluateOperator<CR>",
+      { desc = "[m]olten [e]valuate operator", silent = true })
     vim.keymap.set("n", "<leader>mel", ":MoltenEvaluateLine<CR>", { desc = "[m]olten [e]valuate [l]ine", silent = true })
-    vim.keymap.set("v", "<leader>me", ":<C-u>MoltenEvaluateVisual<CR>", { desc = "[m]olten [e]valuate visual selection", silent = true })
-    vim.keymap.set("n", "<leader>mr", ":MoltenReevaluateCell<CR>", { desc = "[m]olten [r]e-evaluate cell", silent = true })
+    vim.keymap.set("v", "<leader>me", ":<C-u>MoltenEvaluateVisual<CR>",
+      { desc = "[m]olten [e]valuate visual selection", silent = true })
+    vim.keymap.set("n", "<leader>mr", ":MoltenReevaluateCell<CR>",
+      { desc = "[m]olten [r]e-evaluate cell", silent = true })
     vim.keymap.set("n", "<leader>mI", ":MoltenInterrupt<CR>", { desc = "[m]olten [I]nterrupt", silent = true })
     vim.keymap.set("n", "<leader>mR", ":MoltenRestart<CR>", { desc = "[m]olten [R]estart", silent = true })
     vim.keymap.set("n", "<leader>md", ":MoltenDelete<CR>", { desc = "[m]olten [d]elete", silent = true })

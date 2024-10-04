@@ -7,6 +7,10 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+
+    -- NOTE: quarto files do not have a parser registered since commit da61d31a3d51f38a78a739392aabf79e7b2f523f
+    commit = "0c8a582",
+
     build = ":TSUpdate",
     opts = {
       ensure_installed = {
